@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest>
+    <application name="Introduction_Training_SavePersistentData">
+        <crown name="Introduction_Training_SavePersistentData">
+            <desc>user script</desc>
+        </crown>
+        <crown name="Training">
+            <trait>released</trait>
+            <desc>Namespace for various functions and events served by this SensorApp.</desc>
+            <serves>
+                <event name="OnProcessingFinished">
+                    <trait>released</trait>
+                    <desc>Notify the end of processing with number of found data codes.</desc>
+                    <param desc="total number of found data codes" multiplicity="1" name="numberOfDataCodes" type="string"/>
+                </event>
+                <function name="setProcessingDelay">
+                    <trait>released</trait>
+                    <desc>Set a new processing delay and image cycle time. Restart the image loading timer.</desc>
+                    <param desc="new processing delay value in [ms]" multiplicity="1" name="inNewTime" type="int"/>
+                </function>
+                <function name="getProcessingDelay">
+                    <trait>released</trait>
+                    <desc>Provide the current processing delay.</desc>
+                    <return desc="current processing delay in [ms]" multiplicity="1" name="currProcessingDelay" type="int"/>
+                </function>
+                <function name="saveData">
+                    <trait>released</trait>
+                    <desc>Saving data persistently.</desc>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">1.0.0</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <entry default="main.lua" path="scripts"/>
+    </application>
+</manifest>

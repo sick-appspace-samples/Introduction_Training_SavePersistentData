@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Docu\Parameter.cid.xsd">
+  <UserLevel/>
+  <IFD>
+    <CID>
+      <Block Name="Introduction_Training_SavePersistentData">
+        <Group Description="This group will contain configuration parameters for this SensorApp." Name="configuration">
+          <Variable Description="saved value for the processing delay in [ms]" Name="paramProcessingDelay" VirtualMemoryRef="ApplicationParameters">
+            <BasicType>
+              <UInt DefaultValue="1000" MaxValue="10000" MinValue="100" PhysicalUnit="ms"/>
+            </BasicType>
+          </Variable>
+        </Group>
+      </Block>
+    </CID>
+  </IFD>
+  <Hardware>
+    <VirtualMemory Name="ApplicationParameters"/>
+  </Hardware>
+</Device>

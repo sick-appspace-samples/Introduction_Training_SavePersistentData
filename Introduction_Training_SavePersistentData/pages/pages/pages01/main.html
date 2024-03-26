@@ -1,0 +1,19 @@
+<layout-row id="RowLayout1" style="align-items: stretch">
+    <sick-viewer2d id="Viewer2D1" viewer-id="2DImageDisplay" style="width: 80%; height: 100%">
+    </sick-viewer2d>
+    <layout-column id="ColumnLayout1">
+        <davinci-value-display id="ValueDisplay1" value="Processing delay">
+        </davinci-value-display>
+        <davinci-numeric-field id="NumericField1" type="outline" min="100" max="10000" ticks="1" group-separator="," decimal-separator="." format-pattern="0" value="1000" unit="ms">
+            <crown-set event="change" crown-function="Training/setProcessingDelay" protocol="crownMSGPACK" crown-path="inNewTime"></crown-set>
+            <crown-get property="value" crown-function="Training/getProcessingDelay" auto-update-ms="0" protocol="crownMSGPACK"></crown-get>
+        </davinci-numeric-field>
+        <davinci-value-display id="ValueDisplay2" label="Total number of data codes" value="n/a">
+            <crown-on property="value" crown-event="Training/OnProcessingFinished"></crown-on>
+        </davinci-value-display>
+        <davinci-button id="Button1" type="primary" icon-position="append" icon="content/save">
+            <span>Save</span>
+            <crown-set event="submit" crown-function="Training/saveData" protocol="crownMSGPACK"></crown-set>
+        </davinci-button>
+    </layout-column>
+</layout-row>

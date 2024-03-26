@@ -1,0 +1,11 @@
+{
+  "name": "Introduction_Training_SavePersistentData",
+  "version": "1.0.0",
+  "description": "Generated",
+  "components": [
+    "@sick-davinci/basic-elements"
+  ],
+  "dependencies": {
+    "@sick-davinci/basic-elements": "^5.6.5"
+  }
+}
